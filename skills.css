@@ -24,7 +24,7 @@ section {
 }
 
 .sectiontitle {
-    margin-top: 200px;
+    margin-top: 0px;
     display: grid;
     place-items: center;
     align-content: center;
@@ -55,10 +55,14 @@ section {
 
 
 .scrool {
+    font-family: 'Valencia', sans-serif;
+    font-size: 20px;
+    text-align: center;
     display: flex;
     justify-content: center;
     min-width: 60px;
     height: 60px;
+    flex-direction: column;
 }
 
 
@@ -285,18 +289,22 @@ h2 {
     cursor: pointer;
     background-position: bottom;
 }
+
 .grid .two:hover {
     cursor: pointer;
     background-position: bottom;
 }
+
 .grid .three:hover {
     cursor: pointer;
     background-position: bottom;
 }
+
 .grid .four:hover {
     cursor: pointer;
     background-position: bottom;
 }
+
 .grid .five:hover {
     cursor: pointer;
     background-position: bottom;
@@ -318,81 +326,88 @@ h2 {
     }
 }
 
+@media screen and (max-width: 767px) {
 
-    @media screen and (max-width: 1300px) {
+}
 
-        #sakura1,
-        #sakura2,
-        #sakura3,
-        #sakura5 {
-            display: none;
-        }
+@media screen and (max-width: 1300px) {
+
+    #sakura1,
+    #sakura2,
+    #sakura3,
+    #sakura5 {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .sectiontitle {
+        margin-top: 100px;
+        /* Réduisez la marge pour les écrans plus petits */
+        min-height: 20vh;
+        /* Ajustez la hauteur minimale */
 
     }
 
-    @media screen and (max-width: 767px) {
-        .sectiontitle {
-            margin-top: 100px;
-            /* Réduisez la marge pour les écrans plus petits */
-            min-height: 20vh;
-            /* Ajustez la hauteur minimale */
-
-        }
-
-        .sectiontitle h1 {
-            text-align: center;
-
-        }
-
-        .sectiontitle p {
-            text-align: center;
-            margin: 10px 10px 10px 10px;
-
-        }
-    }
-
-    /* Garder l'animation pour les écrans larges */
-    @media screen and (min-width: 768px) {
-        .box {
-            animation: animate 20s linear infinite;
-        }
-    }
-
-    /* Pour les écrans étroits (moins de 768px), empiler les images */
-    @media screen and (max-width: 767px) {
-        .box {
-            position: unset;
-            animation: none;
-            width: 50%;
-
-        }
-
-        section {
-            display: flex;
-            justify-content: center;
-            align-items: unset;
-        }
-
-        .home-box {
-            display: flex;
-            justify-content: center;
-            margin-left: 30px;
-        }
-
-        .box span {
-            transform: none;
-            position: unset;
-        }
-
-        .box span img {
-            width: 100%;
-            height: 50%;
-        }
-
+    .sectiontitle h1 {
+        text-align: center;
 
     }
 
-    /* Styles pour le footer */
+    .sectiontitle p {
+        text-align: center;
+        margin: 10px 10px 10px 10px;
+
+    }
+}
+
+/* Garder l'animation pour les écrans larges */
+@media screen and (min-width: 768px) {
+    .box {
+        animation: animate 20s linear infinite;
+    }
+}
+
+/* Pour les écrans étroits (moins de 768px), empiler les images */
+@media screen and (max-width: 767px) {
+    .box {
+        position: unset;
+        animation: none;
+        width: 50%;
+
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: unset;
+    }
+
+    .home-box {
+        display: flex;
+        justify-content: center;
+        margin-left: 30px;
+    }
+
+    .scrool {
+        display: none;
+    }
+
+    .box span {
+        transform: none;
+        position: unset;
+    }
+
+    .box span img {
+        width: 100%;
+        height: 50%;
+    }
+
+
+}
+
+/* Styles pour le footer */
 /* Styles pour le footer */
 .footer {
     background: #ee6a6a;
