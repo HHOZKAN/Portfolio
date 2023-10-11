@@ -3,13 +3,12 @@
 
 
 * {
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #1f242d;
-    
+    background: #ffffff;
+
 }
 
 .header {
@@ -23,9 +22,9 @@ body {
 
 }
 
-.logo  {
+.logo {
     font-size: 25px;
-    color: aliceblue;
+    color: RGB(255, 189, 89);
     text-decoration: none;
     font-weight: 600;
     cursor: default;
@@ -33,14 +32,19 @@ body {
     animation: slideRight 1s ease forwards;
 }
 
+
 .navbar {
-    margin-right: 30%;
+    align-items: center;
+    text-align: center;
 }
 
 .navbar a {
+    text-align: center;
+    margin: 10px auto;
+    display: block;
     display: inline-block;
     font-size: 18px;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -52,17 +56,24 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-    color: aqua;
+    color: rgb(255, 112, 112);
+    
 }
 
 .home {
-    position: relative;
     width: 100%;
     height: 80vh;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    margin-top: 100px;
     padding: 70px 10% 0;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.home-img {
+    display: flex;
+    justify-content: center;
 }
 
 .home-content {
@@ -70,11 +81,15 @@ body {
 }
 
 .home-content h3 {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
     font-size: 32px;
     font-weight: 700;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: .7s;
+    color: rgb(0, 0, 0);
 }
 
 .home-content h3:nth-of-type(2) {
@@ -84,16 +99,19 @@ body {
 }
 
 .home-content h3 span {
-    color: aqua;
+    color: RGB(255, 189, 89);
+    margin-left: 100px;
 }
 
 .home-content h1 {
+    text-align: center;
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
     opacity: 0;
     animation: slideRight 1s ease forwards;
     animation-delay: .7s;
+    color: rgb(0, 0, 0);
 }
 
 .home-content p {
@@ -101,11 +119,16 @@ body {
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: .7s;
+    color: rgb(0, 0, 0);
+    text-align: justify;
 }
 
 .home-img img {
-    max-width: 450px;
-    margin-right: 250px;
+    width: 600px;
+    max-width: 800px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
 }
 
 .social-media a {
@@ -115,37 +138,41 @@ body {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid aqua;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 50%;
     font-size: 20px;
-    color: aqua;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin: 30px 15px 30px 0;
     transition: .5s ease;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: .7s;
-    
+    animation-delay: calc(.2s * var(--i));
+
 }
 
 
+
 .social-media a:hover {
-    background: #0ef;
+    background:rgb(255, 112, 112);
     color: #1f242d;
-    box-shadow: 0 0 20px #0ef;
+    box-shadow: 0 0 20px rgb(255, 112, 112);;
 }
 
 .btn {
     display: inline-block;
     padding: 12px 28px;
-    background: #0ef;
+    background: rgb(255, 112, 112);
     border-radius: 40px;
-    box-shadow: 0 0 10px #0ef;
+    box-shadow: 0 0 10px rgb(255, 112, 112);;
     font-size: 16px;
     color: #1f242d;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 
@@ -162,6 +189,7 @@ body {
         opacity: 1;
     }
 }
+
 @keyframes slideLeft {
     0% {
         transform: translateX(100px);
@@ -185,6 +213,7 @@ body {
         opacity: 1;
     }
 }
+
 @keyframes slideBottom {
     0% {
         transform: translateY(-100px);
@@ -194,5 +223,155 @@ body {
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: sclae(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: sclae(1);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+
+}
+
+
+
+
+#sakura1 {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 30%;
+}
+
+#sakura2 {
+    position: absolute;
+    top: 5%;
+    left: 70%;
+    width: 30%;
+}
+
+#sakura3 {
+    position: absolute;
+    top: 50%;
+    left: -8%;
+    width: 22%;
+}
+
+#sakura5 {
+    position: absolute;
+    top: 60%;
+    left: 78%;
+    width: 28%;
+    rotate: 80deg;
+}
+
+
+
+
+/* NAVBAR */
+@media screen and (max-width: 1300px) {
+
+
+    .home-img img {
+        display: flex;
+        order: 1;
+        width: 75%;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+    }
+}
+
+
+@media (min-width: 760px) and (max-width: 1800px) {
+
+
+    .home-content {
+        padding: 0;
+        margin-top: 20%;
+        text-align: center;
+
+    }
+
+
+}
+@media screen and (max-width: 758px) {
+
+
+    .navbar a {
+        gap: 10px;
+    }
+
+    /* Cacher les images Sakura */
+    #sakura1,
+    #sakura2,
+    #sakura3,
+    #sakura5 {
+        display: none;
+    }
+
+    .home {
+        padding: 0;
+        margin-top: 20%;
+        flex-direction: column;
+        /* Inverser l'ordre des éléments pour les aligner verticalement */
+        align-items: center;
+        /* Centrer horizontalement les éléments */
+    }
+
+
+
+    .home-content {
+        padding: 0;
+        order: 2;
+        text-align: center;
+        /* Centrer le contenu texte */
+        /* Ajouter de la marge intérieure gauche/droite pour éviter le chevauchement avec la navbar */
+        text-align: center;
+
+    }
+
+    .home-content h1 {
+        order: 3;
+        font-size: 3vw;
+        /* Ajuster la taille du titre h1 en fonction de la largeur de l'écran */
+        text-align: center;
+
+    }
+
+    .home-content h3 {
+        order: 4;
+        font-size: 4vw;
+        /* Ajuster la taille du sous-titre h3 en fonction de la largeur de l'écran */
+        text-align: center;
+    }
+
+    .home-content p {
+        order: 5;
+        font-size: 3vw;
+        /* Ajuster la taille du texte paragraphe en fonction de la largeur de l'écran */
+        text-align: center;
+        text-align: justify;
     }
 }

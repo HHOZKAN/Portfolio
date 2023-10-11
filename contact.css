@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Open+Sans:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    padding: 10px 0;
+    text-align: center;
+    background: transparent;
+    color: #000000;
+    width: 100%;
+    background: #fa6262;
+  }
+  
+  .navbar a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000000;
+    margin: 0 15px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+  }
+  
+  .navbar a:hover {
+    color: #ffffff;
+  }
+  
+  .contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 20px; /* Réduisez la marge horizontale pour les petits écrans */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fa6262;
+  }
+  
+  .contact .content {
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .contact .content h2 {
+    font-size: 80px;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .contact .content p {
+    margin-top: 50px;
+    font-weight: 300;
+    font-family: 'Victor Mono', monospace;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Ajoutez cette règle pour que les éléments s'enroulent sur les petits écrans */
+  }
+  
+  .container .contactInfo {
+    width: 100%; /* Pour les petits écrans, utilisez 100% de la largeur */
+    margin-top: 20px; /* Réduisez l'espace entre les éléments pour les petits écrans */
+    text-align: center; /* Centrez le texte pour les petits écrans */
+  }
+  
+  .container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Affichez le texte sous l'icône pour les petits écrans */
+    align-items: center; /* Centrez le contenu pour les petits écrans */
+  }
+  
+  .container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+  }
+  
+  .container .contactInfo .box .text {
+    margin-top: 10px; /* Espacez le texte du haut pour les petits écrans */
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+  }
+  
+  .container .contactInfo .box .text h3 {
+    margin-top: 15px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .container .contactInfo .box .text p {
+    margin-top: 15px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+  .footer {
+    background: #fa6262;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles pour les icônes de médias sociaux */
+.social-icon__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.social-icon__item {
+    margin: 0 10px;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.5s;
+}
+
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+/* Styles pour les liens de menu */
+.menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+}
+
+.menu__item {
+    margin: 0 10px;
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.5s;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    color: white;
+    opacity: 1;
+}
+  
+  @media (max-width: 768px) {
+    .contact {
+      padding: 50px;
+    }
+  
+    .container {
+      flex-direction: column;
+    }
+  }
+  
+
+  @keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
