@@ -333,7 +333,7 @@ body {
 
     .home {
         padding: 0;
-        margin-top: 20%;
+        margin-top: 40%;
         flex-direction: column;
         /* Inverser l'ordre des éléments pour les aligner verticalement */
         align-items: center;
